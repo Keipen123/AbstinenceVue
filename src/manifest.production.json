@@ -1,0 +1,22 @@
+{
+    "manifest_version": 3,
+    "name": "Abstinence",
+    "description": "Keep some websites out of your reach!",
+    "version": "0.1",
+    "background": {
+        "service_worker": "/background.js"
+    },
+    "action": {
+        "default_popup": "popup.html"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "/content.js"
+            ]
+        }
+    ]
+}
